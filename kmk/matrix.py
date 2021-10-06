@@ -35,11 +35,11 @@ class MatrixScanner:
         # two tuples into a set and validating that the length did not drop
         #
         # repr() hackery is because CircuitPython Pin objects are not hashable
-        unique_pins = {repr(c) for c in cols} | {repr(r) for r in rows}
-        assert (
-            len(unique_pins) == self.len_cols + self.len_rows
-        ), 'Cannot use a pin as both a column and row'
-        del unique_pins
+#        unique_pins = {repr(c) for c in cols} | {repr(r) for r in rows}
+#        assert (
+#            len(unique_pins) == self.len_cols + self.len_rows
+#        ), 'Cannot use a pin as both a column and row'
+#        del unique_pins
 
         self.diode_orientation = diode_orientation
 
